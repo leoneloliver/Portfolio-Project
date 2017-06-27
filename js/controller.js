@@ -7,6 +7,7 @@ myApp.controller('ProjectsController', ['$scope', '$filter', '$http', function($
   
   $scope.order = 'id';
   $scope.pagetitle = 'Projects';
+  $scope.qtd = 6;
   $scope.itens = [
     {
       id: 1, title: 'Janagana', 
@@ -146,6 +147,16 @@ myApp.controller('ProfileController', ['$scope', '$filter', '$http', function($s
 
 }]);
 
-
-
-
+// project list in directive
+myApp.directive("projectList", function() {
+   return {
+       restrict: 'AECM',
+       templateUrl: 'projects.html',
+       replace: true,
+       scope: {
+          itensList: "=",
+          order: '@',
+          qtd: '@'
+       }
+   }
+});
