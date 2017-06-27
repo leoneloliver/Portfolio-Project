@@ -1,0 +1,15 @@
+<div class='col-6 project-item'>
+  <div class='card'>
+    <img alt='{{itensList.title}} Project' class='card-img-top' ng-src='{{itensList.image}}'>
+    <div class='card-cover' ng-if="itensList.code">
+      <a ng-href='{{itensList.code}}' target='_blank'>&lt;GET CODE /&gt;</a>
+    </div>
+    <div class='card-block'>
+      <h4 class='card-title'>{{itensList.title}}</h4>
+      <p class='card-text'>{{itensList.description}}</p>
+      <div class='card--info'>{{itensList.techs}}</div>
+      <div class='card-footer'></div>
+      <a class='btn--hubba btn--full--sm' ng-href='{{itensList.link}}' target='_blank'>Go somewhere</a>
+    </div>
+  </div>
+</div>
