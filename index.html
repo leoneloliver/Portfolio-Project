@@ -15,7 +15,6 @@
 </head>
 
 <body>
-
   <div class='header row'>
     <div class='menu-mobile'>
       <ul class='mobi-menu'>
@@ -78,27 +77,8 @@
       </div>
       <div class='col-8 clean' ng-controller="ProjectsController">
         <h2 id='projectsMobile'>{{pagetitle}}</h2>
-        
-        <div class='col-6 project-item' ng-repeat="item in itens | orderBy:order">
-          <div class='card'>
-            <img alt='{{item.title}} Project' class='card-img-top' ng-src='{{item.image}}'>
-            <div class='card-cover' ng-if="item.code">
-              <a ng-href='{{item.code}}' target='_blank'>&lt;GET CODE /&gt;</a>
-            </div>
-            <div class='card-block'>
-              <h4 class='card-title'>{{item.title}}</h4>
-              <p class='card-text'>{{item.description}}</p>
-              <div class='card--info'>{{item.techs}}</div>
-              <div class='card-footer'></div>
-              <a class='btn--hubba btn--full--sm' ng-href='{{item.link}}' target='_blank'>Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        
-        <div class="center container-btn-more">
-          <div class="btn--orange btn--full isHide" id="load-more">+ Projects</div>
-        </div>
-        
+         <!-- render project list template (directive) -->
+         <project-list itens-list="item" ng-repeat="item in itens | orderBy: order | limitTo: qtd"></project-list>
       </div>
     </div>
   </div>
@@ -126,5 +106,4 @@
     </div>
   </footer>
 </body>
-
 </html>
