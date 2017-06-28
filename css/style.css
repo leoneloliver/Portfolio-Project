@@ -99,6 +99,11 @@ p {
   width: 85%;
 }
 
+.fa-bars{
+  font-size: 25px;
+  padding-right: 10px;
+}
+
 .container, .container--full {
   width: 90%;
   margin-left: auto;
