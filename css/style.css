@@ -103,7 +103,11 @@ p {
   font-size: 25px;
   padding-right: 10px;
 }
-
+.fa-window-close-o{
+  color: #969696;
+  font-size: 27px;
+  margin-top: 10px;
+}
 .container, .container--full {
   width: 90%;
   margin-left: auto;
